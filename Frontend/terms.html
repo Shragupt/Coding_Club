@@ -33,7 +33,6 @@
       body {
         /* color: black; */
         font-family: Arial, sans-serif;
-        margin: 20px;
         padding: 20px;
         background-color: #f9f9f9;
       }
@@ -45,6 +44,20 @@
   border: 1px solid #444;
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         }
+
+        header{
+          padding: 20px 0px !important;
+          width: 100% !important;
+        }
+
+        footer{
+        width: 100% !important;
+        padding: 5px 0px !important;
+      }
+
+      .wrapper {
+        justify-content: space-evenly !important;
+      }
        
 
 
@@ -57,10 +70,9 @@
   font-size: 1rem;
 }
       .container {
-        max-width: 800px;
         color: black;
-        margin-top:20px;
-        margin-bottom:20px;
+          max-width: 800px;
+        margin: auto;
         background: #fff;
         padding: 20px;
         border-radius: 10px;
@@ -127,13 +139,13 @@
           <nav id="navbar">
           <ul>
               <li><a href="./index.html">Home</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="https://coding-club-dgb7.vercel.app/#about">About</a></li>
               <li><a href="event.html">Events</a></li>
-              <li><a href="#projects">Projects</a></li>
+              <li><a href="projectpage.html">Projects</a></li>
                <li><a href="login.html">Login</a></li>
               <li><a href="contributor.html">Contributors</a></li>
               <li><a href="review.html">Reviews</a></li>
-              <li><a href="#feedback">Feedback</a></li>
+              <li><a href="https://coding-club-dgb7.vercel.app/index.html#feedback">Feedback</a></li>
               <button id="toggleTheme" class="toggle-btn">🌙</button>
           </ul>
         </nav>
@@ -143,21 +155,21 @@
               <i class="fas fa-bars"></i>
           </div>
           <ul class="nav-links" id="navLinks">
-              <span id="closeMenu"><i class="fas fa-times"></i></span>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#events">Events</a></li>
+              <!-- <span id="closeMenu"><i class="fas fa-times"></i></span> -->
+              <li><a href="index.html">Home</a></li>
+              <li><a href="https://coding-club-dgb7.vercel.app/#about">About</a></li>
+              <li><a href="event.html">Events</a></li>
               <li><a href="projectpage.html">Projects</a></li>
               <li><a href="login.html">Login</a></li>
               <li><a href="contributor.html">Contributors</a></li>
               <li><a href="review.html">Reviews</a></li>
-              <li><a href="#feedback">Feedback</a></li>
+              <li><a href="https://coding-club-dgb7.vercel.app/index.html#feedback">Feedback</a></li>
               <button id="toggleTheme-mobile" class="menu-toggle-btn">🌙</button>
           </ul>        
       </nav>
     </header>
     <div class="container">
-      <a href="index.html" class="back-button">⬅ Back to Home</a>
+      <!-- <a href="index.html" class="back-button">⬅ Back to Home</a> -->
 
       <h1>Terms & Conditions</h1>
       <p>Last updated: <strong>February 17, 2025</strong></p>
@@ -246,13 +258,13 @@
         <div class="quick-contact">
           <h3>Quick Links</h3>
           <ul>
-            <li class="sec-nav"><a href="#home">Home</a></li>
-            <li class="sec-nav"><a href="#about">About</a></li>
+            <li class="sec-nav"><a href="index.html">Home</a></li>
+            <li class="sec-nav"><a href="https://coding-club-dgb7.vercel.app/index.html#about">About</a></li>
             <li class="sec-nav"><a href="event.html">Events</a></li>
-            <li class="sec-nav"><a href="#projects">Projects</a></li>
-            <li class="sec-nav"><a href="#contact">Contact</a></li>
-            <li class="sec-nav"><a href="#faq">FAQ</a></li>
-            <li class="sec-nav"><a href="#feedback">Feedback</a></li>
+            <li class="sec-nav"><a href="projectpage.html">Projects</a></li>
+            <li class="sec-nav"><a href="https://coding-club-dgb7.vercel.app/index.html#contact">Contact</a></li>
+            <li class="sec-nav"><a href="https://coding-club-dgb7.vercel.app/index.html#faq">FAQ</a></li>
+            <li class="sec-nav"><a href="https://coding-club-dgb7.vercel.app/index.html#feedback">Feedback</a></li>
           </ul>
         </div>
         <div class="quick-contact">
@@ -279,7 +291,7 @@
         <a href="terms.html">Terms & Conditions</a>
       </div>
 
-      <div class="copyright">© 2025 YourWebsite. All rights reserved.</div>
+      <div class="copyright">© 2025 Coding Club. All rights reserved.</div>
     </footer>
     <script src="script.js"></script>
     <script src="toggle.js"></script>
