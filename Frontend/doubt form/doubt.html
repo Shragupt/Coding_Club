@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Forum</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f2f2f2; text-align: center; }
+        .container { width: 50%; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px gray; }
+        input { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid gray; border-radius: 4px; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+        .doubt-box { background: #eef; margin: 10px 0; padding: 10px; border-radius: 5px; position: relative; }
+        .delete-btn { position: absolute; right: 10px; top: 2px; background: black; color: white; border: none; cursor: pointer; }
+        .back-home { margin-top: 20px; display: inline-block; padding: 10px; background: blue; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Doubt's Forum</h2>
+    <div class="container">
+        <h3>Post Your Doubt</h3>
+        <input type="text" id="doubtInput" placeholder="Enter your doubt...">
+        <button onclick="addDoubt()">Submit</button>
+        <h3>All Doubts</h3>
+        <div id="doubtList"></div>
+    </div>
+    <a href="index.html" class="back-home">⬅ Back to Home</a>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", loadDoubts);
+        function addDoubt() {
+            let input = document.getElementById("doubtInput");
+            let doubtText = input.value.trim();
+            if (doubtText === "") {
+                alert("Please enter a doubt before submitting!");
+                return;
+            }
+            let doubts = JSON.parse(localStorage.getItem("doubts")) || [];
+            doubts.push(doubtText);
+            localStorage.setItem("doubts", JSON.stringify(doubts));
+            input.value = "";
+            loadDoubts();
+        }
+        function loadDoubts() {
+            let doubts = JSON.parse(localStorage.getItem("doubts")) || [];
+            let list = document.getElementById("doubtList");
+            list.innerHTML = "";
+            doubts.forEach((doubt, index) => {
+                let div = document.createElement("div");
+                div.className = "doubt-box";
+                div.innerHTML = `${doubt} <button class='delete-btn' onclick='deleteDoubt(${index})'>❌</button>`;
+                list.appendChild(div);
+            });
+        }
+        function deleteDoubt(index) {
+            let doubts = JSON.parse(localStorage.getItem("doubts"));
+            doubts.splice(index, 1);
+            localStorage.setItem("doubts", JSON.stringify(doubts));
+            loadDoubts();
+        }
+    </script>
+</body>
+</html>
+
